@@ -1,15 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
+
+@layer components {
+	.btn {
+		@apply inline-flex items-center text-center border-0 py-2 px-4 focus:outline-none rounded text-base capitalize;
+	}
+	.navbar {
+		@apply overflow-hidden md:ml-auto flex flex-wrap items-center justify-center flex-col gap-7 md:gap-0 fixed top-0  w-full h-screen z-[500] md:flex-row md:w-fit md:h-auto bg-white md:bg-transparent md:relative text-base font-bold md:font-normal transition-all;
+	}
+}
 
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
 }
 
-:root {
-	--primary: red;
+::-webkit-scrollbar {
+	width: 6px;
+	background-color: #e6e6e6;
+}
+::-webkit-scrollbar-thumb {
+	background: #a6a6a6;
+	border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #818181;
 }
