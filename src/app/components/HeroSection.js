@@ -13,7 +13,7 @@ const HeroSection = ({ title, para, imgSrc, alt }) => {
 
 						<p className="my-3 md:my-6 text-sm md:text-base">{para}</p>
 
-						<Link href={"/movie"}>
+						<Link href={"/movies"}>
 							<button className="btn bg-red-600 hover:bg-red-700 text-white text-sm md:text-base">
 								explore movies
 							</button>

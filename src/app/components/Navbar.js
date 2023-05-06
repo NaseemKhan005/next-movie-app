@@ -1,17 +1,16 @@
 import Link from "next/link";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { HiOutlineBars3 } from "react-icons/hi2";
-// import { useState } from "react";
+import { useState } from "react";
 
 const Navbar = () => {
 	// state for opening and closing menu bar
-	// const [isOpened, setIsOpened] = useState(false);
+	const [isOpened, setIsOpened] = useState(false);
 
 	return (
 		<>
 			<div className="overflow-hidden">
-				{/* <nav className={isOpened ? "navbar -right-full" : "navbar right-0"}> */}
-				<nav className="navbar -right-full">
+				<nav className={isOpened ? "navbar active" : "navbar"}>
 					<Link href={"/"} className="mr-5 hover:text-gray-900">
 						Home
 					</Link>
@@ -28,7 +27,7 @@ const Navbar = () => {
 					{/* close menu icon */}
 					<IoIosCloseCircleOutline
 						className="md:hidden absolute top-5 right-12 text-4xl cursor-pointer"
-						// onClick={setIsOpened(false)}
+						onClick={() => setIsOpened(false)}
 					/>
 
 					{/* signIn signOut Buttons */}
@@ -48,7 +47,7 @@ const Navbar = () => {
 				{/* open menu icon */}
 				<HiOutlineBars3
 					className="md:hidden text-2xl cursor-pointer"
-					// onClick={setIsOpened(true)}
+					onClick={() => setIsOpened(true)}
 				/>
 			</div>
 		</>
